@@ -1,0 +1,41 @@
+:root {
+  --bg-top: #171433;
+  --bg-bottom: #08081a;
+  --ink: #f2f0fa;
+  --muted: rgba(242, 240, 250, 0.66);
+  --gold: #f5c25c;
+  --surface: rgba(255, 255, 255, 0.055);
+}
+* { box-sizing: border-box; }
+html { background: var(--bg-bottom); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, rgba(245, 194, 92, 0.16), transparent 55%),
+              linear-gradient(var(--bg-top), var(--bg-bottom));
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+header {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  max-width: 760px; margin: 0 auto; padding: 20px 16px;
+}
+.brand { color: var(--ink); text-decoration: none; font: 600 22px/1 "New York", Georgia, serif; }
+.langs { display: flex; gap: 4px; }
+.langs button {
+  background: var(--surface); color: var(--muted); border: 0; border-radius: 999px;
+  padding: 6px 10px; font: 600 13px/1 inherit; cursor: pointer;
+}
+.langs button.active { background: var(--gold); color: #1a1405; }
+main { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+article { display: none; }
+article.active { display: block; }
+h1 { font: 600 40px/1.15 "New York", Georgia, serif; margin: 12px 0 12px; }
+h2 { font-size: 19px; margin: 32px 0 6px; color: var(--gold); }
+.lead { font-size: 19px; color: var(--muted); }
+p { margin: 0 0 12px; }
+a { color: var(--gold); }
+details { background: var(--surface); border-radius: 14px; padding: 12px 16px; margin: 8px 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--muted); margin: 10px 0 0; }
+.small { font-size: 14px; color: var(--muted); margin-top: 32px; }
